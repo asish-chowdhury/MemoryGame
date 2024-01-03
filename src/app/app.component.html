@@ -1,2 +1,29 @@
-<h2 style="text-align: center;">Memory Game</h2>
-<app-memory-game></app-memory-game>
+<!-- <h2 style="text-align: center;">Memory Game</h2>
+<app-level-selector></app-level-selector>
+
+<div *ngIf="selectedLevel === 'easy'">
+  <app-memory-game></app-memory-game>
+</div>
+
+<div *ngIf="selectedLevel === 'hard'">
+  <app-hard-level></app-hard-level>
+</div> -->
+
+
+<h2 class="title">Memory Game</h2>
+
+<div>
+    <label for="level">Level:</label>
+    <select id="level" [(ngModel)]="selectedLevel" (change)="onLevelChange()">
+        <option value="easy">Easy</option>
+        <option value="hard">Hard</option>
+    </select>
+</div>
+
+<div *ngIf="selectedLevel === 'easy'">
+    <app-memory-game></app-memory-game>
+</div>
+
+<div *ngIf="selectedLevel === 'hard'">
+    <app-hard-level></app-hard-level>
+</div>
