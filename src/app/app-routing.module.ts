@@ -8,8 +8,8 @@ import { HardLevelComponent } from './hard-level/hard-level.component';
 const routes: Routes = [
   { path: 'easy', component: MemoryGameComponent },
   { path: 'hard', component: HardLevelComponent },
-  { path: '', redirectTo: '/easy', pathMatch: 'full' }, // Default route to 'easy'
-  { path: '**', redirectTo: '/easy' }, // Redirect any unmatched route to 'easy'
+  { path: '', redirectTo: '/easy', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/easy' },
 ];
 
 @NgModule({
